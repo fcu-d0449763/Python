@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				position:relative;
+			}
+			#div1{
+				height: 600px;
+				width: 600px;
+				background-color: red;
+
+
+			}
+			#div2{
+				height: 400px;
+				width: 400px;
+				background-color: yellow;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+			#div3{
+				height: 200px;
+				width: 200px;
+				background-color: burlywood;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3">
+					
+				</div>
+			</div>
+		</div>
+		<script src="js/mylib.js"></script>
+		<script type="text/javascript">
+			var div1 = document.getElementById("div1");
+			bind(div1,"click",function(){
+				alert("I am one!");
+			});
+			var div2 = document.getElementById("div2");
+			bind(div2,"click",function(){
+				alert("I am two!");
+			});
+			var div3 = document.getElementById("div3");
+			bind(div3,"click",function(evt){
+				alert("I am three!");
+				evt.stopPropagation()
+			});
+			bind(document.body,"click",function(){
+				alert("I am body!");
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!--
+	CSS中可以通过left,right,bottom,top属性来设置标签到上下左右的距离(但是默认情况下这些值不是都有效的)
+	想让定位属性有效,必须通过position属性设置参考对象.
+	
+	1.position
+	initial:默认值,没有相对定位
+	absolute:相对第一个非static/initial父标签进行定位
+	relative:相对于自己在标准流中位置来定位.当标签本身不希望去定位,只是想让自己的子标签可以相对本身来定位的时候使用
+	fixed:相对于浏览器定位
+	sticky:当网页的内容不超过一屏(不滚动)的时候,就按照标准流进行定位.超过了就相对浏览器定位
+	
+	
+	2.注意:如果想要设置right值要保证相对标签的宽度是确定的.如果想要设置bottom值就要保证相对对象的高度是确定的.
+	
+	3.技巧:当遇到某个方向定位死活都无效,可以尝试让这个标签浮动,然后再定位
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#div1{
+				position: absolute;
+				
+				right: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--1.absolute-->
+		<!--<div id="" style="background-color: skyblue;width: 700px;height: 800px;position: relative;">
+			<div id="" style="background-color: black;width: 400px;height: 400px;position: static;">
+				<div id="div1" style="background-color: gold;width: 200px;height: 200px;">
+			
+				</div>
+			</div>
+		</div>
+		-->
+		<!--2.relative-->
+		<!--<div id=""style="background-color: skyblue;height: 100px;">
+			
+		</div>
+		
+		<div id=""style="background-color: sandybrown;height:100px;width: 100px;top:20px;position: relative;">
+			
+		</div>-->
+		
+		<!--3.fixed-->
+		<!--<div id=""style="background-color: gold;height:20000px">
+			aaaaaa
+			<div id=""style="background-color: red;width: 100px;height:50px;bottom: 20px;right:50px;position: fixed;">
+				<a href="#top">回到顶部</a>
+			</div>
+			
+		</div>
+		-->
+		
+		<!--4.sticky-->
+		<div id=""style="background-color: gold;height:200px">
+			
+		</div>
+		<div id=""style="background-color: red;width: 100%;height:50px;bottom: 20px;right:50px;position: sticky;">
+			<a href="#top">回到顶部</a>
+		</div>
+	</body>
+</html>

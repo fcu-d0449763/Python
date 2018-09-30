@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+			#div1{
+				height: 100px;
+				width: 100px;
+				top:100px;
+				left: 100px;
+				background-color: lightblue;
+				position: fixed;
+				
+			}
+			#closeBtn{
+				float: right;
+				color: gray;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<button id="closeBtn">关闭</button>
+		</div>
+		<script src="js/mylib.js"></script>
+			<script type="text/javascript">
+				var closeBtn = document.getElementById("closeBtn");
+				//元素访问子节点-children
+				//元素访问父节点-parentNode
+				//元素访问兄弟节点-previousSibing/nextSiling
+				var advDiv = closeBtn.parentNode;
+				var currentStyle = advDiv.currentStyle?   //读取属性
+					advDiv.currentStyle:
+					document.defaultView.getComputedStyle(advDiv);
+				
+				bind(closeBtn,'click',function(evt){
+//					evt = evt || window.event;
+//					evt.target = evt.target ||evt.srcElement;
+//					evt.target.parentNode.style.display = 'none';
+//					closeBtn.parentNode.style.display = 'none';
+					
+					//IE可能不兼容
+					var w = parseInt(currentStyle.width);
+					var h = parseInt(currentStyle.height);
+					advDiv.style.width =w*2+'px' ;
+					advDiv.style.height =h*2+'px' ;
+				});
+				var flag = 0;
+				bind($("div1"),'mousedown',function(evt){
+					flag = 1;
+					if(flag ==1){
+						var distanceX = evt.clientX - div1.offsetLeft;
+　　　　					var distanceY = evt.clientY - div1.offsetTop;
+						bind($("div1"),"mousemove",function(evt){
+							div1.style.left = evt.clientX - distanceX + 'px';
+　　　　　　					div1.style.top = evt.clientY - distanceY + 'px';
+						});
+					}
+					
+					bind($("div1"),"mouseup",function(){
+						flag = 0;
+					});
+					
+					
+				});
+				
+				
+				
+			</script>
+	</body>
+</html>

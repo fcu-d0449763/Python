@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../day11-文件操作与异常捕获/.idea/day11-文件操作与异常捕获.iml" filepath="$PROJECT_DIR$/../day11-文件操作与异常捕获/.idea/day11-文件操作与异常捕获.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/day6-容器类型.iml" filepath="$PROJECT_DIR$/.idea/day6-容器类型.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../leetcode/.idea/leetcode.iml" filepath="$PROJECT_DIR$/../leetcode/.idea/leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../stu_mangementsys/.idea/stu_mangementsys.iml" filepath="$PROJECT_DIR$/../stu_mangementsys/.idea/stu_mangementsys.iml" />
+    </modules>
+  </component>
+</project>

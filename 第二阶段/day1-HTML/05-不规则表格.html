@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			colspan:列合并
+			rowspan:行合并
+			过程:先确定表格中最多多少行,然后再数每一行有多少单元格
+				再确定每个单元格是否有合并现象,如果单元格有行的合并就设置单元格的rowspan属性
+				如果有列的合并就设置单元格的colspan的值
+		-->
+		<table bgcolor="black" cellspacing="1" width="600" height="500">
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td colspan="2"></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td rowspan="2"></td>
+				<td rowspan="2"></td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<hr />
+		<table bgcolor="black" cellspacing="1" width="600" height="500">
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td colspan="3"></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td rowspan="3"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue"
+				<td rowspan="2"></td>
+				<td rowspan="2"></td>
+				<td rowspan="2"></td>
+				<td></td>
+			</tr>
+			<tr bgcolor="aliceblue">
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

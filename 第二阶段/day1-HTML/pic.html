@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片和超链接</title>
+	</head>
+	<body>
+		<p><b>图片标签:img标签</b></p>
+		<p>单标签</p>
+		<p>src属性:图片地址(可以是本地图片地址,也可以是远程服务器上的图片地址)<br />
+			title属性:设置图片的标题(这个标题是停留在图片上等一会出现的文字)<br />
+			alt属性:用来设置图片加载失败的时候出现的提示信息</p>
+		<p><b>超链接标签:a标签</b></p>
+		<p>	(1)<br />
+			href属性:跳转目标对应的地址<br />
+			a.其他的网页地址---跳转<br />
+			b.写本地的一个html路径---跳转<br />
+			c.空-----刷新当前网页(重新加载)<br />
+			d.选择器----让网页跳转到指定的位置</p>
+		<p>	(2)<br />
+			target属性:设置跳转方式
+			<br />
+			_self(默认值):在当前页中刷新出新的内容
+			<br />
+			_blank:创建一个新的页面,在新的页面中刷新出href指定的内容
+			<br />
+			注意:刷新当前网页和在当前网页中跳转到指定位置的时候,只能使用默认的_self</p>
+		
+		<img id='1' src="img/dcat1.jpg" title='龙猫'/ alt='加载失败' width="100" height="150">
+		<br />
+		<p><font color="red">此链接点开为在本网页显示</font></p>
+		<a target="_self" href="http://baidu.com">百度一下</a>
+		<br />
+		<p><font color="blue"> 此链接点开为在另一网页打开</font></p>
+		<a target="_blank" href="http://baidu.com">百度一下</a>
+	</body>
+</html>

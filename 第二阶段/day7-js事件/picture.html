@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				position: relative;
+			}
+			#div1{
+				background-color: lightblue;
+				height: 400px;
+			}
+			#pic{
+				height: 400px;
+				width: 600px;
+				position: absolute;
+				left: 300px;
+
+			}
+			ul li:first-child{
+				color: white;
+			}
+			ul li{
+
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="div1">
+			<img id="pic"></img>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				
+			</ul>
+		</div>
+		<script src="js/mylib.js"></script>
+		<script type="text/javascript">
+			pics = ["img/slide-1.jpg","img/slide-2.jpg","img/slide-3.jpg","img/slide-4.jpg"];
+			var img = document.getElementById("pic");
+			var num = 0;
+//			img.src="img/slide-1.jpg";
+			
+			function showPic(){
+				img.src=pics[num];
+				num +=1;
+				if(num==pics.length){
+          			num=0;
+        		}
+			}
+			showPic();
+			var timer = setInterval(showPic,100);
+			var pic1 = document.getElementById("pic")
+			bind(pic1,"mouseover",function(){
+				clearInterval(timer);
+			})
+			bind(pic1,"mouseout",function(){
+				timer = setInterval(showPic,100)
+			})
+		</script>
+	</body>
+</html>

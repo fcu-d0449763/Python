@@ -1,0 +1,61 @@
+<!--
+	前面的元素选择器,id选择器,class选择器,选中的都是标签.
+	伪类选择器是选中标签的某个状态
+	
+	伪类选择器:选中某个标签的不同状态(一般使用与超链接和按钮等)
+	1.语法:-----标签:状态
+	标签:状态{}
+	说明:
+	a.状态:
+	link:初始状态(a标签对应的初始状态是没有访问成功过对应状态)
+	visited:访问后的状态(使用a标签)
+	hover:鼠标悬停在标签上对应的状态
+	active:被激活对应的状态(一般用于超链接)
+	focus:成为焦点(在输入框中用得比较多)
+	
+	b.标签:可以是通过不同的选择器去选中
+	
+	2.爱恨原则:LoVeHAte
+	如果想要给一个标签同时给link\visit\hover\active中的两个或者两个以上的状态设置样式,必须遵守爱恨原则
+	(如果不按爱恨原则可能会出现问题,如果按照爱恨原则肯定不会出现问题)
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			a:link{
+				color: gray;
+				text-decoration: none;
+			}
+			a:visited{
+				color:red ;
+			}
+			a:hover{
+				color: blue;
+				text-decoration: underline;
+			}
+			a:active{
+				color: yellow;
+			}
+			p:hover{
+				background-color: gainsboro;
+				color: red;
+			}
+			input:focus{
+				outline:none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">百度一下</a>
+		<p>红红火火恍恍惚惚呵呵哈哈哈哈哈哈哈</p>
+		
+		<input type="text" name="" id="" value="" />
+		
+	</body>
+</html>

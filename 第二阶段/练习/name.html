@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .box{
+            width: 1000px;
+            height: 240px;
+            /*background-color: aqua;*/
+            margin: 0 auto;
+            margin-top: 100px;
+            clear: both;
+        }
+        #btn{
+            width: 100px;
+            height: 30px;
+            margin-left: 600px;
+            margin-top: 50px;
+        }
+        .name{
+            width: 100px;
+            height: 30px;
+            float: left;
+            background-color: antiquewhite;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        #span{
+            float: right;
+            position: relative;
+            top: 55px;
+            right: 185px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>随机点名系统</h1>
+    <span id="span"></span>
+    <div class="box" id="box"></div>
+    <input type="button" id="btn" value="点名"/>
+    <script>
+//        获取id函数
+        function my$(id){
+            return document.getElementById(id)
+        };
+//        模拟后台数据
+        var arr = ["曹小	琴","吕耐芯","叶玉","李涵","杨熠文","魏世强","樊振霖","何羽",
+          "龙汉","唐小富","吴亮","廖鸿业","吕皓洁","黄峰","邓森中","冉钊","曾德裕","李萌"
+          ,"江秀成","李祥","王磊","刘彦材","陈鸿州","唐宏进","王建平","李俊橙","于梦娇","王龙"
+          ,"刘诗意","桂林","殷安好","刘欢","任思雨"
+      ];
+//        动态创建层
+        for(var i =0;i<arr.length;i++){
+            var div = document.createElement("div");
+            div.innerText=arr[i];
+            div.className="name";
+            my$("box").appendChild(div);
+        };
+//        点名
+        my$("btn").onclick=function(){
+            var peoples= arr.length;
+//            监视按钮的状态
+            if(this.value==="点名"){
+//                定时针
+                  timeId=setInterval(function () {
+//                      清空所有层的颜色
+                    for(var i =0;i<arr.length;i++){
+                        my$("box").children[i].style.background=""
+                    };
+//                      留下当前层的颜色
+                    var random = parseInt(Math.random()*peoples);
+                    my$("box").children[random].style.background="red";
+                },100);
+                this.value="停止";
+            }else{
+//                清除计时器
+                clearInterval(timeId);
+                this.value="点名";
+            };
+        };
+
+//        获取时间的函数
+        getTime();
+        setInterval(getTime,1000)
+        function getTime(){
+            var day = new Date();
+            var year = day.getFullYear();//年
+            var month = day.getMonth()+1;//月
+            var dat = day.getDate();//日
+            var hour = day.getHours();//小时
+            var minitue = day.getMinutes();//分钟
+            var second = day.getSeconds();//秒
+            month=month<10?"0"+month:month;
+            dat=dat<10?"0"+dat:dat;
+            hour=hour<10?"0"+hour:hour;
+            minitue=minitue<10?"0"+minitue:minitue;
+            second=second<10?"0"+second:second;
+            my$("span").innerText=year+"-"+month+"-"+dat+" "+hour+":"+minitue+":"+second
+        }
+
+
+    </script>
+</body>
+</html>

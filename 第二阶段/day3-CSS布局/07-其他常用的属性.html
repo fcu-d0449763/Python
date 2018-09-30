@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*1.字体相关的属性
+			 * 字体颜色:color
+			 * 字体大小:font-size
+			 * 字体名:font-family
+			 * 字体加粗:font-weight
+			 * 字体倾斜:font-style
+			 * 
+			 */
+			p{
+				font-family:"微软雅黑" ;
+				font-weight:900 ;
+				font-style:oblique;
+			}
+			/*2.对齐方式:text-align
+			 * left:左对齐
+			 * right:右对齐
+			 * center:水平方向居中
+			 * */
+			p{
+				text-align: center;
+			}
+			/*3.行高:line-height
+			 * 设置一行的高度
+			 * */
+			p{
+				/*一行内容在垂直方向上居中,可以通过将line-height的值设置为和height的值一样*/
+				line-height: 100px;
+			}
+			/*4.文本修饰:text-decortion
+			 * none:取消修饰
+			 * underline:下划线
+			 * overline:上划线
+			 * line-through:删除线
+			 * */
+			a{
+				text-decoration: none;
+			}
+			a:hover{
+				text-decoration: underline;
+				color: red;
+			}
+			/*5.首行缩进:text-intent
+			 * 注意单位是:em(表示空格)
+			 * */
+			p{
+				text-indent: 2em;
+			}
+			
+			/*6.字间距:letter-spacing
+			 单位可以是:px,em,%
+			 * 
+			 * */
+			p{
+				letter-spacing:2px;
+			}
+			ul{
+				/*list-style-type*/
+				/*list-style-image: url(img/cat.jpg);*/
+				/*list-style-position: ;*/
+			}
+			/*8.背景图片
+			 background:图片地址,是否平铺  x方向的坐标 y方向的坐标 背景色
+			 * */
+			div{
+				width: 500px;
+				height:500px;
+				background: url(img/cat.jpg) no-repeat;
+			}
+			/*9.设置圆角
+			 radius
+			 * */
+			div{
+				border-bottom-right-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="">百度一下</a>
+		<p style="background-color: skyblue;height: 100px;">我是段落:hello world</p>
+		
+		<ul>
+			<li>数学</li>
+			<li>语文</li>
+		</ul>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

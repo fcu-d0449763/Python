@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机点名系统</title>
+		<style type="text/css">
+			#div1{
+				height: 100px;
+				background-color: white;
+				color: red;
+				text-align: center;
+				margin: auto;
+				line-height: 100px;
+				font-size: 50px;
+			}
+			#div2{
+				margin: auto;
+				height: 100px;
+				text-align: center;
+			}
+			#div2 button{
+				border: 0;
+				color: white;
+				background-color: red;
+				border-radius: 2px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<p id="name"></p>
+		</div>
+		<div id="div2">
+			<button onclick="start()">开始</button>
+			<button onclick="close1()">停止</button>
+		</div>
+		<script type="text/javascript">
+			var arr = ["曹小琴","吕耐芯","叶玉","李涵","杨熠文","魏世强","樊振霖","何羽",
+          "龙汉","唐小富","吴亮","廖鸿业","吕皓洁","黄峰","邓森中","冉钊","曾德裕","李萌"
+          ,"江秀成","李祥","王磊","刘彦材","陈鸿州","唐宏进","王建平","李俊橙","于梦娇","王龙"
+          ,"刘诗意","桂林","殷安好","刘欢","任思雨"];
+        var name1 = document.getElementById("name");
+        var num = 0;
+        name1.textContent=arr[num]
+        var myVar;
+		var bool = 0;
+        function showName(){
+			var name2 = arr[num];
+        	name1.textContent = name2;
+        	num +=1;
+        	if(num==arr.length){
+          		num=0
+        	}
+        	myVar =window.setTimeout(function(){showName()},10);
+        }
+		
+        function start(){
+        	if(!bool){
+        		bool=1;
+        		showName();
+        	}
+          	
+          	
+        }
+		function close1(){
+		  	
+		  	window.clearTimeout(myVar);
+		  	bool = 0;
+		}
+          
+          
+		</script>
+	</body>
+</html>

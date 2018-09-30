@@ -1,0 +1,318 @@
+/*============通用=========*/
+/*注意:写网页前一定要先将标签默认的margin值的padding值全部关掉*/
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+button{
+	border: 0;
+	
+}
+button:focus{
+	outline: 0;
+	
+}
+/*=============顶部=========*/
+#top{
+	/*background-color:burlywood ;*/
+	height: 120px;	
+}
+/*========顶部的顶部========*/
+#top #banner{
+	/*background-color: darkkhaki;*/
+	height: 80px;
+	
+}
+#top #banner a{
+	position: absolute;
+	right: 180px;
+	bottom: 10px;
+	
+	font-size: 12px;
+	color: rgb(138,138,138);
+	/*去掉下划线*/
+	text-decoration: none;
+	
+	/*设置图标
+	 * background:图片地址 是否平铺 x y 颜色
+	 */
+	background: url(../img/q-icon.png) no-repeat 0px center;
+	padding-left:20px ;
+}
+#top #banner a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+
+#top #banner #img1{
+	margin-left: 188px;
+	
+	/*垂直居中*/
+	position: absolute;
+	top:50%;
+	margin-top: -30px;
+	line-height: 60px;	
+}
+#top #banner #img2{
+	position: absolute;
+	left: 365px;
+	/*垂直居中*/
+	top: 50%;
+	margin-top: -8px;
+	line-height: 40px;
+}
+/*=======顶部的底部===========*/
+#top #message{
+	background-color: rgb(255,246,236);
+	height: 40px;
+	
+}
+#top #message p{
+	font-size: 11px;
+	color: rgb(138,138,138);
+	/*水平居中*/
+	width: 792px;
+	margin-right: auto;
+	margin-left: auto;
+	/*垂直居中*/
+	height: 40px;
+	line-height:40px ;
+	/*背景图*/
+	padding-left: 25px;
+	background: url(../img/warning.png) no-repeat 0px center;
+	
+}
+#top #message a{
+	color: black;
+	text-decoration: none;
+}
+#top #message a:hover{
+	text-decoration: underline;
+	
+}
+
+/*==============内容=========*/
+#content{
+	background-color:rgb(84,161,220) ;
+	height:475px
+}
+/*=========内容的背景=========*/
+#content img1{
+	margin-left: 100px;
+	/*垂直居中*/
+	position: absolute;
+	top:50%;
+	margin-top: -237px;
+}
+/*===========登录框=====*/
+#content #login{
+	background-color: rgb(250,250,250);
+	height:400px ;
+	width: 350px;
+	position: absolute;
+	right: 190px;
+	top:15px ;
+}
+/*====登录框顶部====*/
+#content #login #div1{
+	height: 100px;
+	/*background-color: lightskyblue;*/
+}
+#content #login #div1 #text{
+	height: 40px;
+	background-color: rgb(255,246,236);
+}
+#content #login #div1 #text p{
+	font-size: 11px;
+	text-align: center;
+	color: rgb(138,138,138);
+	
+	height: 40px;
+	line-height: 40px;
+}
+#content #login #div1 #text p img{
+	position: absolute;
+	top: 50%;
+	margin-top: -12px;
+	line-height: 25px;
+}
+#content #login #div1 #button{
+	height: 60px;
+	color: rgba(220,220,220,0.4);
+	font-size: 20px;
+	font-weight: 100;
+	font-family: "微软雅黑";
+	/*background-color:white;*/
+}
+#content #login #div1 #button button{
+	width: 48%;
+	height: 100%;
+	border: 0;
+	background-color: rgba(255,255,255,0);
+	color: rgb(80,80,80);
+	font-size: 20px;
+}
+
+#content #login #div1 #button btn2{
+	float: right;
+}
+#content #login #div1 #button button :focus{
+	color: rgb(217,34,46);
+	outline: 0;
+}
+/*#content #login #div1 #button button:visited{
+	color: red;
+}*/
+
+/*===登录框中部====*/
+#content #login #div2{
+	/*background-color:salmon ;*/
+	height: 250px;
+	border-bottom: 1px solid rgba(220,220,220,0.5) ;
+	border-top:1px solid rgba(220,220,220,0.5) ;
+}
+#content #login #div2 #username,#password{
+	/*background-color: blueviolet;*/
+	width: 300px;
+	height: 40px;
+	/*水平居中*/
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid rgb(200,200,200);
+	
+}
+/*用户名*/
+#content #login #div2 #username{
+	margin-top: 30px;
+}
+#content #login #div2 #password{
+	margin-top: 0px;
+
+}
+#content #login #div2 input{
+	height: 100%;
+	width: 249px;
+	border: 0;
+	padding-left:10px ;
+	float:right ;
+	border-left:1px solid rgb(200,200,200) ;
+	font-size: 14px;
+}
+#content #login #div2 input:focus{
+	outline: 0;
+}
+
+#content #login #div2 #username #user-btn,#password-btn{
+	height:40px;
+	width: 40px;
+	
+}
+#content #login #div2 #username #user-btn img,#password-btn img{
+	width: 100%;
+	height: 100%;
+}
+/*忘记密码*/
+#content #login #div2 a{
+	position: absolute;
+	right: 25px;
+	margin-top: 20px;
+	
+	font-size: 13px;
+	color: rgb(138,138,138);
+	text-decoration: none;
+}
+#content #login #div2 a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+#content #login #div2 #btn1{
+	display: block;
+	width: 300px;
+	height: 35px;
+	
+	position: absolute;
+	bottom: 30px;
+	left:25px ;
+	border: 0;
+	background-color: rgb(217,34,46);
+	color: white;
+	font-size: 20px;
+}
+#content #login #div2 button:focus{
+	outline: none;
+}
+/*在点击按钮的时候添加边框效果*/
+#content #login #div2 button:active{
+	outline: cornflowerblue solid 2px;
+	-moz-outline-radius: 2px;
+	
+}
+/*===登录框底部====*/
+#content #login #div3{
+	height: 50px;
+	line-height: 50px;
+	font-size: 8px;
+	color: rgba(220,220,220,0.4);
+}
+#content #login #div3 a{
+	font-size: 12px;
+	color: rgb(138,138,138);
+	text-decoration: none;
+}
+#content #login #div3 a:hover{
+	color: red;
+	text-decoration: underline;
+}
+#content #login #div3 #qq{
+	margin-left: 25px;
+	margin-right: 15px;
+	background: url(../img/qq.png) no-repeat 0 center;
+	padding-left: 25px;
+}
+#content #login #div3 #weixin{
+	margin-left:5px ;
+	background: url(../img/weixin.png) no-repeat 0 center;
+	padding-left: 25px;
+}
+#content #login #div3 #zhuce{
+	position: absolute;
+	right: 25px;
+	background: url(../img/right.png)no-repeat 0 center;
+	padding-left:25px ;
+}
+
+
+/*================底部=========*/
+#bottom{
+	/*background-color: gold;*/
+	height:105px;
+	text-align: center;
+	
+}
+
+#bottom #a{
+	height:50px;
+	/*background-color: lightblue;*/
+	line-height: 50px;
+	font-size:12px ;
+	color: rgb(138,138,138);
+}
+#bottom #a a{
+	margin-left: 10px;
+	margin-right: 15px;
+	color: rgb(138,138,138);
+	text-decoration: none;
+}
+#bottom #a a:hover{
+	text-decoration: underline;
+	color: red;
+}
+#bottom p{
+	color: rgb(130,130,130);
+	text-align: center;
+	font-size: 12px;
+}

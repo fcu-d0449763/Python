@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//JavaScript创建对象的构造器语法
+			/*
+			function Student(name,age){
+				this.name = name;
+				this.age = age;
+//				this.study = function(courseName){
+//					alert(this.name + "正在学习" + courseName);
+				}
+			//对象方法绑定在类型的prototype上
+				Student.prototype.study = function(courseName){
+					alert(this.name + "正在学习" + courseName);
+				};
+				//静态方法直接绑定在类型上
+				Student.sayHello = function(){
+					alert("大家好");
+				}
+				//创建对象使用 - new + 构造器函数
+			var obj = new Student("江秀成",2);
+			obj.study("Linux");
+			Student.sayHello();
+			*/
+			
+			//JSON - JavaScript Object Notation
+			//JSON 是JavaScript中创建对象的字面量语法
+			//现在被广泛应用于存储和交换数据
+			/*
+			var obj = {
+				"name":"江秀成",
+				"age" : 2,
+				"study":function(courseName){
+					alert(this.name + '正在学习' + courseName);
+				},
+				"watchAv":function(){
+					if(this.age < 18){
+					alert(this.name + "走开")
+				}else{
+					alert(this.name + "正在看片");
+					}
+				}
+			};
+			obj.study("js");
+			*/
+			
+			
+			/*
+			var obj = new Object();
+			obj.name = '江秀成';
+			obj.age = 2;
+			obj.study = function(courseName){
+				alert(this.name + '正在学习' + courseName);
+			};
+			obj.watchAv = function(){
+				if(this.age < 18){
+					alert(this.name + "走开")
+				}else{
+					alert(this.name + "正在看片");
+				}
+			}
+			obj.study("python");
+			obj.watchAv();
+			*/
+		</script>
+	</body>
+</html>

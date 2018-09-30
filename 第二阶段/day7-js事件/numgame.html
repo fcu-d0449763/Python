@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#num{
+				width: 100px;
+				height: 30px;
+				margin: 0;
+
+			}
+			#confirm{
+				
+			}
+			#hint{
+				width: 100px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="number" id="num" value="" placeholder="0-100"/>
+		<input type="button" id="ok" value="确定"/>
+		<p id="hint"></p>
+		<script src="js/mylib.js"></script>
+		<script>
+			var answer = parseInt(Math.random()*100+1);
+			var okBtn = document.getElementById("ok");
+			var numInput = document.getElementById("num");
+			var hintPara = document.getElementById("hint");
+			function guess() {
+				var thyAnswer = parseInt(numInput.value);
+				if(numInput.value == thyAnswer) {
+					var hint = "你猜的是" + thyAnswer + ". ";
+					if (thyAnswer > answer) {
+						hint += "小一点";
+					} else if (thyAnswer < answer) {
+						hint += "大一点";
+					} else {
+						hint += "恭喜你猜对了!";
+						okBtn.disabled = true;
+						numInput.disabled = true;
+					}
+					hintPara.innerHTML += hint + "<br>";
+				} else {
+					alert("你是猴子派来的逗比吗!?");
+				}
+				numInput.value = "";
+				numInput.focus();
+			}
+			
+			bind(okBtn, "click", guess);
+			bind(numInput, "keydown", function(evt) {
+				evt = evt || window.event;
+				console.log(evt.keyCode);
+				console.log(evt.which);
+				if (evt.keyCode == 13 || evt.which == 13) {
+					guess();
+				}
+			});
+		</script>
+
+			
+		</script>
+	</body>
+</html>

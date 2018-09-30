@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2><span id="counter">5</span>秒钟以后自动跳转到百度...</h2>
+		<script type="text/javascript">
+			var countdown = 5;
+			var span = document.getElementById("counter")
+			function delayGo(){
+				countdown -= 1;
+				if(countdown == 0){
+					//window.location--浏览器地址栏
+					//window.document--文档对象
+					//window.history-历史记录
+					//window.navigator-浏览器
+					//window.screen--屏幕
+					location.href="http://www.baidu.com";
+				}else{
+					span.textContent=countdown;
+					setTimeout(delayGo,1000)
+				}
+				
+			}
+			setTimeout(delayGo,1000);
+		</script>
+	</body>
+</html>

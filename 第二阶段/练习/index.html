@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				position: relative;
+			}
+			p{
+				text-align: center;
+				font-size:22px ;
+				
+			}
+			input{
+				border-top: 0;
+				border-right:0;
+				border-left:0 ;
+				outline: none;
+			}
+			#x{
+				background-color: red;
+				color: white;
+				border: 0;
+				border-radius: 2px;
+				position: absolute;
+				right: 12px;
+				bottom: 9px;
+
+			}
+			#le1{
+				background-color:gray ;
+				
+			}
+			#form1{
+				height: 200px;
+				width: 300px;
+				margin: 10px auto;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post" id="form1">
+			<fieldset id="">
+				<legend id="le1">用户登录</legend>
+					<p>用户名:<input type="text" value="" name="username" id="username"/></p>
+					<p>密码:<input type="password" name="passname" value=""  id="passname"/></p>
+					<p>邮箱 :<input type="email" name="email" id="email" value="" /></p>
+					<button id="x">登录</button>
+				
+			</fieldset>
+			
+			
+		</form>
+		<button onclick="showMessage()">确定</button>
+		<button onclick="showTable()">查看乘法口诀表</button>
+		<script type="text/javascript">
+			function showTable(){
+				document.write("<table style='border-collapse: collapse;'>");
+				for(var i = 1;i<=9;i+=1){
+					document.write("<tr>");
+					for (var j=1;j<=i;j+=1){
+						document.write("<td style='border: 1px solid black;'>");
+						document.write(i + "*" + j + "=" + i*j );
+						document.write("</td>");
+					}
+					document.write("</tr>");
+				}
+				document.write("</table>");
+			}
+			function showMessage(){
+				for(var i=0;i<3;i+=1){
+					var name = window.prompt('请输入你的名字');
+					if(name){
+						window.alert("你好,"+name+'!');
+						
+					}else{
+						window.alert('大家好!')
+					}
+				}
+				if(window.confirm("确定要关闭浏览器窗口吗?")){
+					window.close();
+				}
+			}
+		</script>
+	</body>
+</html>

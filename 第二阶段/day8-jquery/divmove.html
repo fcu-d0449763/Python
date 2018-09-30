@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#one {
+				position: fixed;
+				width: 300px;
+				height: 300px;
+				left: 50px;
+				top: 50px;
+				background-color: lightgreen;
+			}
+			#two {
+				position: fixed;
+				width: 200px;
+				height: 200px;
+				right: 50px;
+				bottom: 50px;
+				background-color: lightpink;
+			}
+			#three {
+				position: fixed;
+				width: 250px;
+				height: 250px;
+				left: 50px;
+				bottom: 50px;
+				background-color: darkgrey;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+		<script src="js/mylib.js"></script>
+		<script>
+			var draggables = [];
+			
+			function makeDraggable(div) {
+				draggables.push(div);
+				div.isMouseDown = false;
+				div.originX = 0;
+				div.originY = 0;
+				div.oldX = 0;
+				div.oldY = 0;
+				div.start = function(evt) {
+					for (var i = 0; i < draggables.length; i += 1) {
+						draggables[i].style.zIndex = 0;
+					}
+					this.style.zIndex = 10;
+					this.isMouseDown = true;
+					var currentStyle = document.defaultView.getComputedStyle(this);
+					this.originX = parseInt(currentStyle.left);
+					this.originY = parseInt(currentStyle.top);
+					this.oldX = evt.pageX;
+					this.oldY = evt.pageY;
+				};
+				div.move = function(evt) {
+					if (this.isMouseDown) {
+						var dx = evt.pageX - this.oldX;
+						var dy = evt.pageY - this.oldY;
+						this.style.left = this.originX + dx + "px";
+						this.style.top = this.originY + dy + "px";
+					}
+				};
+				div.stop = function() {
+					this.isMouseDown = false;
+				};
+				bind(div, "mousedown", div.start);
+				bind(div, "mousemove", div.move);
+				bind(div, "mouseup", div.stop);
+				bind(div, "mouseout", div.stop);
+			}
+			
+			makeDraggable($("one"));
+			makeDraggable($("two"));
+			makeDraggable($("three"));
+		</script>
+	</body>
+</html>

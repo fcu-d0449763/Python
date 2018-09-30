@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			h1{
+				background-color: lightblue;
+				font-size: 1cm;
+				color: black;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1 id="h1" class="foo">欢迎来到千峰教育成都校区python班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+		<script type="text/javascript">
+			//var h1 = document.querySelectorAll(".foo")[0];
+			//var h1 = document.querySelector(".foo");
+			//var h1 = document.getElementsByClassName("foo")[0];
+			//var h1 = document.getElementsByTagName("h1")[0];
+			var h1 = document.getElementById("h1")
+			function move(){
+				var str = h1.textContent;
+				str = str.substring(1)+str.charAt(0);
+				h1.textContent= str;
+			}
+			window.setInterval(move,100);
+		</script>
+	</body>
+</html>

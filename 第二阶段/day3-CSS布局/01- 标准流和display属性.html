@@ -1,0 +1,74 @@
+	<!--1.标准流:浏览器对标签默认的布局方式就是标准流
+	2.标准流布局原则:
+	块级:a.块级标签一个占一行(不管标签的宽度是否是浏览器宽度).
+				   b.默认宽度是父标签的宽度,默认高度是内容的高度
+				   c.直接设置宽高有效
+	行内块标签:
+		a.多个行内块可以在一行显示
+		b.默认的宽高都是内容的宽高
+		c.直接设置宽高有效
+	行内标签:
+		a.多个行内块可以在一行显示
+		b.默认的宽高都是内容的宽高
+		c.直接设置宽高无效
+	
+	3.display属性:转换标签的性质
+	block:块级
+	inline:行内
+	inline-block:行内块
+	注意:行内块标签和其他标签之间默认有间隙,而且这个间隙无法消除
+	
+	
+	
+	
+	-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#div1{
+				background-color: skyblue;
+				width: 100px;
+				height: 100px;
+			}
+			#div2{
+				background-color: red;
+				width: 100px;
+				height: 100px;
+
+			}
+			div{
+				display:inline-block ;
+			}
+			a{
+				background-color: sandybrown;
+				width: 100px;
+				display: block;
+			}
+			img{
+				width: 200px;
+				height: 200px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		
+
+		<div id="div1">
+			ab
+		</div>
+		<div id="div2">
+			ABCABC
+		</div>
+		<a href="">百度一下</a>
+		<a href="">百度一下</a>
+		<img src="img/cat.jpg"/>
+		<img src="img/cat.jpg"/>
+	</body>
+</html>
