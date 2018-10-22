@@ -26,3 +26,34 @@ b.virtualenv --no-site-packages  -p <python版本路径> <文件夹>   (针对�
 5.进入env文件夹里面的新建的文件夹里面,再进入Scripts文件夹里  , 运行activate 命令进入虚拟环境  
 6.在这个虚拟环境里面就可以安装你想安装的东西  
 7.deactivate 退出虚拟环境
+
+#### 创建项目
+>django-admin startproject 项目名day1  
+&emsp;&emsp;day1工程目录文件夹,__init__.py,settings.py,wsgi.py,urls.py  
+&emsp;&emsp;manage.py:工具集管理入口
+
+##### 启动
+>IP:0.0.0.0 PORT:80  
+>python manage.py runserver IP:PORT
+>python manage.py runserver PORT
+
+##### 访问管理后台 admin
+> http://127.0.0.1:8080/admin/
+
+##### 修改数据库配置settings.py
+
+>ENGINE,USER,PASSWORD,HOST,PORT,NAME
+
+##### 映射模型到数据库中
+>pythonmanage.py migrate
+
+##### 安装数据库驱动
+>pip install pymysql
+
+##### 初始化数据库的驱动__init__.py
+>import pymysql
+>pymysql.install_as_mysqldb()
+
+##### 创建超级管理员命令
+
+>python manage.py createsuperuser
